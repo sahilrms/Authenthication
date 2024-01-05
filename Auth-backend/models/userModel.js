@@ -11,6 +11,13 @@ const userSchema = new mongoose.Schema({
         required:[true,"Email is required"],
         trim:true,
         maxLength:[50,"Max length must be <30"]
+    },
+    password:{
+        type:String,
+        required:[true,"Password is required"],
     }
-})
+},{timestamps:true})
+
+
+
 module.exports=mongoose.model("User",userSchema)
