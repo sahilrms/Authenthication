@@ -23,7 +23,7 @@ exports.login = async (req, res) => {
                 message: "invalid credentials"
             });
         }
-        console.log(User.methods)
+        
         const token = user.jwtToken();
         user.password = undefined;
 
